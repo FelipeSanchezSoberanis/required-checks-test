@@ -1,5 +1,2 @@
-const someFunction = () =>
-
-
-    console.log("Hello, world!");
+const someFunction = () => console.log("Hello, world!");
 someFunction();
