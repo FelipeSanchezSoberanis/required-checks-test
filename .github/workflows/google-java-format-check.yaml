@@ -1,0 +1,19 @@
+name: Google java format check
+on:
+  workflow_dispatch:
+  pull_request:
+jobs:
+  prettier-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install java
+        run: |
+          apt install openjdk-21-jre
+      - name: Download google-java-format
+        run: |
+          wget https://github.com/google/google-java-format/releases/download/v1.22.0/google-java-format-1.22.0-all-deps.jar
+      - name: Check formatting with google-java-format
+        run: |
+          find -name "*.java" | xargs java -jar google-java-format-1.22.0-all-deps.jar --dry-run
