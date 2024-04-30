@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Install java
         run: |
-          apt install openjdk-21-jre
+          sudo apt install openjdk-21-jre
       - name: Download google-java-format
         run: |
           wget https://github.com/google/google-java-format/releases/download/v1.22.0/google-java-format-1.22.0-all-deps.jar
