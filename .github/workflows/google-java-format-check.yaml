@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   pull_request:
 jobs:
-  prettier-check:
+  google-java-format-check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
