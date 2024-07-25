@@ -20,5 +20,7 @@ jobs:
           if [ -z "$unformattedFiles" ]; then
             exit 0
           else
+            echo "Unformatted files:"
+            echo $unformattedFiles
             exit 1
           fi
